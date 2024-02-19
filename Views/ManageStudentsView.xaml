@@ -1,0 +1,33 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentDictionary.Views.ManageStudentsView"
+             Title="Manage Students and Lucky Numbers">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Resources/Style.css"/>
+    </ContentPage.Resources>
+    <ScrollView>
+        
+    <VerticalStackLayout Spacing="25" Padding="30" class="vertical-stack">
+            <Label class="label" Text="Class management" TextColor="#8b4513"/>
+            <Grid ColumnDefinitions="2*,1*">
+                <Entry Grid.Column="0" x:Name="NewClassNameEntry" class="entry" Placeholder="Enter new class name" HorizontalOptions="FillAndExpand"/>
+                <Button Grid.Column="1" Text="Add New Class" Clicked="OnAddNewClassClicked" StyleClass="button" HorizontalOptions="FillAndExpand" Margin="5,0,0,0"/>
+            </Grid>
+            <Label class="label" Text="Student management" TextColor="#8b4513"/>
+
+            <Entry x:Name="NewStudentNameEntry" Placeholder="Enter new student name" class="entry"/>
+            <Grid ColumnDefinitions="2*,1*">
+                <Picker  Grid.Column="0" x:Name="ClassPicker" Title="Select class for new student"/>
+                <Button Grid.Column="1" Text="Add New Student" StyleClass="button" Clicked="OnAddNewStudentClicked" Margin="5,0,0,0"/>
+            </Grid>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <VerticalStackLayout HorizontalOptions="Center">
+                    <Label Text="Lucky Number:" class="label" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="LuckyNumberLabel" class="label" TextColor="Green" HorizontalOptions="Center"/>
+                    <Button Text="Generate" Clicked="OnGenerateLuckyNumberClicked" StyleClass="button" HorizontalOptions="FillAndExpand"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

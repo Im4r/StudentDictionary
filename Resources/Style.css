@@ -1,0 +1,38 @@
+﻿^contentpage {
+    color: #8b4513;
+    -maui-shell-background: #f5f5dc;
+}
+
+.vertical-stack{
+    background-color:antiquewhite;
+    margin:2 6;
+}
+.vertical-stack > .picker {
+   border-width:thin;  
+}
+label {
+    font-size: large;
+}
+
+.entry {
+    font-size: medium;
+    background-color: #f5f5dc;
+    border-color: #8b4513;
+    border-width: thin;
+    text-align:center
+}
+.button {
+    background-color:brown;
+    color:aliceblue;
+}
+
+.picker {
+    font-size: medium;
+    background-color: #f5f5dc;
+    color: #8b4513;
+}
+
+#SelectedStudentLabel {
+    font-size: large;
+    color: blue;
+}
